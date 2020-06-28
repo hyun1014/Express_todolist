@@ -38,7 +38,7 @@ app.post('/new_todo', (req, res) => {
     var newItem = new Todo({
         name: newTodo
     });
-    Todo.create(newItem, (err, Todo) =>{
+    Todo.create(newItem, (err, Todo) =>{ // Java static method랑 비슷한건가? 뭐지
         if(err){
             console.log(err);
             throw err;
