@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>
+            Todolist index
+        </title>
+    </head>
+    <body>
+        <h1>This is todo list</h1>
+        <h2>What to do</h2>
+
+        <div>
+            <ol>
+                <% for(let i=0 ; i<todoList.length ; i++) { %>
+                    <li><%= todoList[i].name %> </li>
+                <% } %> 
+            </ol>
+        </div>
+        <form action="/new_todo" method="POST">
+            What to do: 
+            <input type="text" name="todo" placeholder="Input what to do">
+            <input type="submit" value="Add to list">
+        </form>
+    </body>
+</html>
